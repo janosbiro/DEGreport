@@ -13,10 +13,10 @@ StatCor <- ggproto("StatCor", Stat,
                            y = scales$y$range$range[2] + 0.1 * scales$y$range$range[2]
                        data.frame(x = x,
                                   y = y,
-                                  label = paste0("Cor (", method, "): ",
-                                                 round(cr[["estimate"]], digits = 2),
-                                                 ", pval: ",
-                                                 round(cr[["p.value"]], digits = 2)))
+                                  label = paste0(method, "-korreláció: ",
+                                               round(cr[["estimate"]], digits = 2),
+                                               ", p-érték: ",
+                                               round(cr[["p.value"]], digits = 2)))
                        
                    },
                    required_aes = c("x", "y")
